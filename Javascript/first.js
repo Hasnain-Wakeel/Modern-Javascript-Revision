@@ -313,22 +313,125 @@
 // let segment = countryName.slice(0,5)            // index 5 is not included
 // console.log(segment);
 
+// -------------------------  Giving Negative Values in Slice : --------------------------
+
+// -------------- Positive Indexes : --------------
+
+//          P   a   k   i   s   t   a   n
+//          0   1   2   3   4   5   6   7
+
+// -------------- Negative Indexes : --------------
+
+//          P   a   k   i   s   t   a   n
+//         -8  -7  -6  -5  -4  -3  -2  -1
+
+// Example : 1 
+
+// let countryName = new String("Pakistan");
+// let segment = countryName.slice(-4, 7);
+// console.log(segment);
+
+// ----------- Expalanation : -----------
+
+// ---> Length of string = 8
+// -->  Start = -4, this means that: 8 + (-4) = 4
+// -->  The final answer is that start from index 4 
+// -->  End = 7, this means that: ends slicing at index 7 (remember: index 7 is excluded)
+
+// Now, The Actual Slice Becomes :
+
+// let countryName = new String("Pakistan");
+// let segment = countryName.slice(4, 7);
+// console.log(segment);                            // sta
+
+// Example : 2
 
 // let countryName = new String("Pakistan");
 // let segment = countryName.slice(2, -2)
 // console.log(segment)                            // kist
 
+// --------  Explanation : --------
+
+// ---> Start = 2 → index 2 = 'k'
+// ---> End = -2 → length 8 + (-2) = 6
+// ---> Means End index = 6 (but index 6 is excluded)
+
+// -------- Now, the Actual Slice Becomes : -------
+
 // let countryName = new String("Pakistan");
-// let segment = countryName.slice(5, -2)
+// let segment = countryName.slice(2, 6)
+// console.log(segment)                            // kist
+
+// Example : 3
+
+// let countryName = new String("Pakistan");
+// let segment = countryName.slice(5, -2)       (-2 means index 6)
 // console.log(segment)                            // t
+
+// Example : 4
 
 // let countryName = new String("Pakistan");
 // let segment = countryName.slice(0, -3)
 // console.log(segment)                            // Pakis
 
+// Example : 5
+
 // let countryName = new String("Pakistan");
 // let segment = countryName.slice(1, -5)
-// console.log(segment)                               // ak
+// console.log(segment)                            // ak
+
+// ---------------------------
+
+// As we khow that we give negative values in the slice method, here a question rises that 
+// whether we can give negative values in the 'substring' method ?? Lets check it out !!!
+
+// let countryName = new String("Pakistan");
+// let segment = countryName.substring(0, 2);
+// console.log(segment);               // Pa
+
+
+// let countryName = new String("Pakistan");
+// let segment = countryName.substring(6, -7);
+// console.log(segment);       
+
+// ---------- Explanation : ----------
+
+// 1. Starts from starting Index. (inclusive).
+// 2. Ends before the Last Index. (exclusive).
+// 3. If there is an Negative Index or NaN in the Parameters in Sub-string, then Javascript treats it as 0.
+// 4. If Start > End then Javascript swaps them.
+
+// Example : 1 
+
+// let countryName = "Pakistan"
+// let segment = countryName.substring(6, -7)
+// console.log(segment)                        // Pakist
+
+// Start = 6
+// End = -7 ---> JavaScript treats it as 0.
+
+// Now See :
+
+// Start (6) > End (0), then :
+// Javascript swaps them.
+
+// Now, the SubString treated as:
+
+// let countryName = "Pakistan";
+// let segment = countryName.substring(0, 6);
+// console.log(segment);
+
+// This proves that if we give negative values in the substring method, it will ignore our negative value 
+// and replace it with 0.
+
+// -------- More Examples : --------
+
+
+
+
+
+
+// -----------------------------------------------------------------------------------------------------
 
 
 
