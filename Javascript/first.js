@@ -253,9 +253,92 @@
 // --------------------------------- Modern Method/Syntax to Declare Strings : ---------------------------------
 
 
-// let countryName = "Pakistan";       // Normal and Old Method
+// let countryName = "Pakistan";                    // Normal and Old Method
 
-// let countryName = new String("Pakistan")
+
+// let countryName = new String('Pakistan')            // returns string as an "object"
 // console.log(countryName);
-let countryName = new String('Pakistan')
-console.log(countryName);
+
+
+// We can use a lot of methods with "string" object :
+
+// let countryName = "Pakistan";
+// "OR"
+// let countryName = new String("Pakistan");
+
+// console.log(countryName.length);                        // 8
+// console.log(countryName[0]);                            // P
+// console.log(countryName.toUpperCase());                 // PAKISTAN
+// console.log(countryName.toLowerCase());                 // pakistan
+// console.log(countryName.charAt(6));                     // a
+// console.log(countryName.indexOf("a"));                  // 1
+// console.log(countryName.lastIndexOf("a"));              // 7
+
+// let string = "Banana";
+// console.log(string.lastIndexOf("a", 4));                // 3
+
+// Explanation :
+
+// fromIndex = 4 (means from index 4) :
+
+// “Index 4 se peeche ki taraf dekho aur "a" ka last occurrence batao.”
+
+// Index 4 tak string "Banan" hai.
+// "a" last baar index 3 par aaya tha.
+// Isliye output --> 3.
+
+// let word = "Mississippi";
+// console.log(word.lastIndexOf("s", 5));                  // 3
+
+// console.log(countryName.slice(2, 5));                   // kis
+// console.log(countryName.slice(2));                      // kistan
+// console.log(countryName.replace("Pakistan", "China"));  // China
+// console.log(countryName.split(""));                     // ["P", "a", "k", "i", "s", "t", "a", "n"]
+// console.log(countryName.split(" "));                    // ["Pakistan"]
+
+
+// --------------- More/Advanced/Other Methods in Strings : ---------------
+
+// let countryName = new String("Pakistan");
+
+// console.log(countryName.repeat(3));             // PakistanPakistanPakistan
+// console.log(countryName.includes("i"));         // true
+// console.log(countryName.startsWith("P"));       // true
+// console.log(countryName.endsWith("n"));         // true
+
+// let segment = countryName.substring(0,2);       // Note that : index 2 is excluded.
+// let segment = countryName.substring(4,6);       // Note that : index 6 is excluded.
+// console.log(segment);
+
+// let segment = countryName.slice(0,5)            // index 5 is not included
+// console.log(segment);
+
+
+// let countryName = new String("Pakistan");
+// let segment = countryName.slice(2, -2)
+// console.log(segment)                            // kist
+
+// let countryName = new String("Pakistan");
+// let segment = countryName.slice(5, -2)
+// console.log(segment)                            // t
+
+// let countryName = new String("Pakistan");
+// let segment = countryName.slice(0, -3)
+// console.log(segment)                            // Pakis
+
+// let countryName = new String("Pakistan");
+// let segment = countryName.slice(1, -5)
+// console.log(segment)                               // ak
+
+
+
+
+
+
+
+
+
+
+
+
+
