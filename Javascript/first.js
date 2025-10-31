@@ -433,15 +433,100 @@
 
 // -----------------------------------------------------------------------------------------------------
 
+// --------------------------  Slice Method in Javascript : ---------------------------
 
 
+// const fullName = "Hasnain Wakeel";
 
+// let firstName = fullName.slice(0, 7);
 
+// let lastName = fullName.slice(8, 14);
+// let lastName = fullName.slice(8);            // No Ending Index means : take the String to the End
 
+// console.log(firstName);
 
+// console.log(lastName);
 
+// ---------------------------------------
 
+// const fullName = "Hasnain Wakeel";
 
+// let firstChar = fullName.slice(0, 1);
+// console.log(firstChar);
 
+// let lastChar = fullName.slice(-1);       // Negative Index means : take the character from the End towards Start.
+// let lastChar = fullName.slice(-2);
+// let lastChar = fullName.slice(-3);
+// let lastChar = fullName.slice(-4);
+// let lastChar = fullName.slice(-5);
+// let lastChar = fullName.slice(-6);
 
+// let lastChar = fullName.slice(-3, 14);
+// let lastChar = fullName.slice(-11, 12);
+
+// console.log(lastChar);
+
+// ---------------------------------------
+
+// ----------------------------- Built-In Methods of Javascript : ---------------------------
+
+// 1. charAt() :
+
+// let userName = "Hasnain"
+// let firstChar = userName.charAt(0)
+// console.log(firstChar);
+
+// 2. indexOf() :
+
+// let userName = "Hasnain"
+// let index = userName.indexOf("a")
+// console.log(index);
+
+// 3. lastIndexOf() :
+
+// let userName = "Hasnain";
+// let index = userName.lastIndexOf("a")
+// console.log(index);
+
+// 4. Length :                // Length is a property not a method.
+
+// let userName = "Hasnain";
+// let length = userName.length
+// console.log(length);
+
+// 5. trim() :                 // removes/ignores white spaces before and after the String.
+
+// let userName = "      Hasnain   ";
+// let modifiedName = userName.trim()
+// console.log(modifiedName)
+
+// 6. toUpperCase() :
+
+// let email = "abc@gmail.com"
+// let capitalizedEmail = email.toUpperCase()
+// console.log(capitalizedEmail);
+
+// 7. toLowerCase() :
+
+// let email = "AbC@GmAiL.cOm"
+// let lowerCase = email.toLowerCase()
+// console.log(lowerCase);
+
+// 8. repeat() :
+
+// let userName = "Harry";
+// let repititions = userName.repeat(5)
+// console.log(repititions)
+
+// 9. startsWith() :
+
+// let countryName = "Pakistan";
+// let result = countryName.startsWith("t");
+// console.log(result);
+
+// 10. endsWith() :
+
+// let countryName = "Pakistan";
+// let result = countryName.endsWith("n")
+// console.log(result);
 
