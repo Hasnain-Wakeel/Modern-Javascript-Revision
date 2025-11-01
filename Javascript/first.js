@@ -260,7 +260,124 @@
 // console.log(countryName);
 
 
-// We can use a lot of methods with "string" object :
+// ----------------------------- Built-In Strings Methods of Javascript : ---------------------------
+
+// 1. charAt() :
+
+// let userName = "Hasnain"
+// let firstChar = userName.charAt(0)
+// console.log(firstChar);
+
+// 2. indexOf() :
+
+// let userName = "Hasnain"
+// let index = userName.indexOf("a")
+// console.log(index);
+
+// 3. lastIndexOf() :
+
+// let userName = "Hasnain";
+// let index = userName.lastIndexOf("a")
+// console.log(index);
+
+// 4. Length :                // Length is a property not a method.
+
+// let userName = "Hasnain";
+// let length = userName.length
+// console.log(length);
+
+// 5. trim() :                 // removes/ignores white spaces before and after the String.
+
+// let userName = "      Hasnain   ";
+// let modifiedName = userName.trim()
+// console.log(modifiedName)
+
+// 6. toUpperCase() :
+
+// let email = "abc@gmail.com"
+// let capitalizedEmail = email.toUpperCase()
+// console.log(capitalizedEmail);
+
+// 7. toLowerCase() :
+
+// let email = "AbC@GmAiL.cOm"
+// let lowerCase = email.toLowerCase()
+// console.log(lowerCase);
+
+// 8. repeat() :
+
+// let userName = "Harry";
+// let repititions = userName.repeat(5)
+// console.log(repititions)
+
+// 9. startsWith() :
+
+// let countryName = "Pakistan";
+// let result = countryName.startsWith("t");
+// console.log(result);
+
+// 10. endsWith() :
+
+// let countryName = "Pakistan";
+// let result = countryName.endsWith("n")
+// console.log(result);
+
+// let userName = "   Hasnain  ".trim();
+// let result = userName.endsWith(" ");
+// console.log(result);
+// console.log(userName.length);
+
+// if(result){
+//     console.log("Name CANNOT include ' '")
+// }
+// else{
+//     console.log(userName);
+// }
+
+// 11. includes() :
+
+// let email = "abc @gmail.com"
+// let result = email.includes(" ")
+// // console.log(result)
+
+// if (result){
+//     console.log("Email Cannot includes ' '")
+// }
+// else{
+//     console.log(`Your Email is ${email}`);
+// }
+
+// let userName = "Talha"
+// let result = userName.includes("u")
+// console.log(result)
+
+// 12. replace & replaceAll() :
+
+// let phoneNumber = "123-456-7890"
+// phoneNumber = phoneNumber.replace("-", "/")
+// console.log(phoneNumber)
+
+// let phoneNumber = "123-456-7890"
+// phoneNumber = phoneNumber.replaceAll("-", "/")
+// console.log(phoneNumber)
+
+// 13. padStart()
+
+// let userNumber = "11223344"
+// userNumber = userNumber.padStart(12, 9)
+// console.log(userNumber)
+
+// 14. padEnd()
+
+// let userNumber = "11223344"
+// userNumber = userNumber.padEnd(15, 9)
+// console.log(userNumber)
+
+
+// ------------------------------------------------------------
+
+
+// We can use these String methods with "string" object :
 
 // let countryName = "Pakistan";
 // "OR"
@@ -428,11 +545,6 @@
 
 
 
-
-
-
-// -----------------------------------------------------------------------------------------------------
-
 // --------------------------  Slice Method in Javascript : ---------------------------
 
 
@@ -453,8 +565,8 @@
 
 // let firstChar = fullName.slice(0, 1);
 // console.log(firstChar);
-
 // let lastChar = fullName.slice(-1);       // Negative Index means : take the character from the End towards Start.
+// console.log(lastChar);
 // let lastChar = fullName.slice(-2);
 // let lastChar = fullName.slice(-3);
 // let lastChar = fullName.slice(-4);
@@ -466,67 +578,80 @@
 
 // console.log(lastChar);
 
+// --------------------------------------
+
+// let fullName = "Hasnain Wakeel";
+
+// let firstName = fullName.slice(0, fullName.indexOf(" "));
+// let lastName = fullName.slice(fullName.indexOf(" ") + 1);
+
+// console.log(firstName);
+// console.log(lastName);
+
+
+// If there is a 3 words FullName and we want to split it in 2 parts and then access first and second separately :
+
+// let fullName = "Muhammad Wakeel Anjum";
+
+// let firstName = fullName.slice(0, fullName.lastIndexOf(" "));
+// let lastName = fullName.slice(fullName.lastIndexOf(" ") + 1);
+
+// console.log(firstName);     // Muhammad Wakeel
+// console.log(lastName);      // Anjum
+
+
+// --------------------------------------
+
+
+// let fullName = "Muhammad Wakeel Anjum";
+
+// let firstSpace = fullName.indexOf(" ");
+// let lastSpace = fullName.lastIndexOf(" ");
+
+// let firstPart = fullName.slice(0, firstSpace);
+// let middlePart = fullName.slice(firstSpace + 1, lastSpace);
+// let lastPart = fullName.slice(lastSpace + 1);
+
+// console.log(firstPart);     // Muhammad
+// console.log(middlePart);    // Wakeel
+// console.log(lastPart);      // Anjum
+
+
+// ---------------------- Using split() Method : ---------------------
+
+
+// let fullName = "Muhammad Wakeel Anjum";
+
+// let parts = fullName.split(" ");        // ["Muhammad", "Wakeel", "Anjum"]
+
+
+// Accessing all the Parts : ------------------
+
+
+// // console.log(parts[0]);      // Muhammad
+// // console.log(parts[1]);      // Wakeel
+// // console.log(parts[2]);      // Anjum
+
+
+// Or access all the Parts through For Loop : --------------
+
+
+// for (let i = 0; i < parts.length; i++) {
+//   console.log(`Word ${i + 1}: ${parts[i]}`);
+// }
+
+
+// ----------------------------------------------------------
+
+
+// const email = "example@gmail.com";
+
+// let userName = email.slice(0, email.indexOf("@"));
+// let extension = email.slice(email.indexOf("@"));
+// // let extension = email.slice(email.indexOf("@") + 1);
+
+// console.log(userName);
+// console.log(extension);
+
 // ---------------------------------------
-
-// ----------------------------- Built-In Methods of Javascript : ---------------------------
-
-// 1. charAt() :
-
-// let userName = "Hasnain"
-// let firstChar = userName.charAt(0)
-// console.log(firstChar);
-
-// 2. indexOf() :
-
-// let userName = "Hasnain"
-// let index = userName.indexOf("a")
-// console.log(index);
-
-// 3. lastIndexOf() :
-
-// let userName = "Hasnain";
-// let index = userName.lastIndexOf("a")
-// console.log(index);
-
-// 4. Length :                // Length is a property not a method.
-
-// let userName = "Hasnain";
-// let length = userName.length
-// console.log(length);
-
-// 5. trim() :                 // removes/ignores white spaces before and after the String.
-
-// let userName = "      Hasnain   ";
-// let modifiedName = userName.trim()
-// console.log(modifiedName)
-
-// 6. toUpperCase() :
-
-// let email = "abc@gmail.com"
-// let capitalizedEmail = email.toUpperCase()
-// console.log(capitalizedEmail);
-
-// 7. toLowerCase() :
-
-// let email = "AbC@GmAiL.cOm"
-// let lowerCase = email.toLowerCase()
-// console.log(lowerCase);
-
-// 8. repeat() :
-
-// let userName = "Harry";
-// let repititions = userName.repeat(5)
-// console.log(repititions)
-
-// 9. startsWith() :
-
-// let countryName = "Pakistan";
-// let result = countryName.startsWith("t");
-// console.log(result);
-
-// 10. endsWith() :
-
-// let countryName = "Pakistan";
-// let result = countryName.endsWith("n")
-// console.log(result);
 
