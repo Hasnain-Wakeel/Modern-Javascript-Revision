@@ -653,5 +653,23 @@
 // console.log(userName);
 // console.log(extension);
 
-// ---------------------------------------
 
+// ----------------------------------------  Method Chaining :  ----------------------------------------
+
+// Method Chaining : Calling one method after another in one continuous line of code.
+
+// ---- NO METHOD CHAINING ----
+
+let userName = prompt("Enter Your Name :");
+
+userName = userName.trim();
+
+let letter = userName.charAt(0);
+letter = letter.toUpperCase();
+
+let extraChars = userName.slice(1);
+
+extraChars = extraChars.toLowerCase();
+userName = letter + extraChars;
+
+console.log(userName);
