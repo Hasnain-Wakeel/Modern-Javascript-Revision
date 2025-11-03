@@ -656,20 +656,31 @@
 
 // ----------------------------------------  Method Chaining :  ----------------------------------------
 
+
 // Method Chaining : Calling one method after another in one continuous line of code.
 
-// ---- NO METHOD CHAINING ----
 
-let userName = prompt("Enter Your Name :");
+// --------------- NO METHOD CHAINING : -----------------
 
-userName = userName.trim();
+// let userName = windows.prompt("Enter Your Name :");
 
-let letter = userName.charAt(0);
-letter = letter.toUpperCase();
+// userName = userName.trim();
 
-let extraChars = userName.slice(1);
+// let firstChar = userName.charAt(0);
+// firstChar = firstChar.toUpperCase();
 
-extraChars = extraChars.toLowerCase();
-userName = letter + extraChars;
+// let remainingChars = userName.slice(1);
 
-console.log(userName);
+// remainingChars = remainingChars.toLowerCase();
+// userName = letter + remainingChars;
+
+// console.log(userName);
+
+
+// ------------ METHOD CHAINING : ------------
+
+// let userName = prompt("Enter Your Name :");
+
+// userName = userName.trim().charAt(0).toUpperCase() + userName.trim().slice(1).toLowerCase();
+
+// console.log(userName);
